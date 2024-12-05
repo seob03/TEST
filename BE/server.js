@@ -6,7 +6,7 @@ app.use(express.static('public')); // 웹 서버가 public 서빙 제대로 하�
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
-const { MongoClient } = require('mongodb')
+const { MongoClient } = require('Wmongodb')
 
 app.listen(8080, () => {
   console.log('http://localhost:8080 에서 서버 실행중')
