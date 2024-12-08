@@ -4,7 +4,7 @@ function NewsWrite() {
     let [입력값, 입력값변경]=useState(''); // 실시간 입력값 받아오기
 
     function PostNews(){
-        fetch('http://localhost:8080/add', {
+        fetch('/add', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ title: 입력값 })
