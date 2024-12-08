@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import Image from 'react-bootstrap/Image';
 
 function Header() {
     return (
@@ -12,7 +13,9 @@ function Header() {
         {['md'].map((expand) => (
           <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3">
             <Container fluid>
-              <Navbar.Brand href="#">MINIQUE</Navbar.Brand>
+              <Navbar.Brand href="#">
+                <Image src="./img/Logo_horizontal.svg"/>
+              </Navbar.Brand>
               <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
               <Navbar.Offcanvas
                 id={`offcanvasNavbar-expand-${expand}`}
