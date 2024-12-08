@@ -1,0 +1,23 @@
+.Header {
+    background-color: #FFFEFC;
+}
+
+.Search {
+    border-color: black;
+}
+
+.SearchInput {
+    border-radius: 0;
+    border-color: #FFFEFC;
+    width : 360px;
+}
+
+.SearchButton {
+    border-radius: 0;
+    border-color: #FFFEFC;
+}
+
+.SearchButton:hover {
+    background: none;
+    border-color: #FFFEFC;
+}

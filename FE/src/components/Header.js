@@ -1,6 +1,8 @@
+import './Header.css';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -11,7 +13,7 @@ function Header() {
     return (
       <>
         {['md'].map((expand) => (
-          <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3">
+          <Navbar key={expand} expand={expand} className="Header">
             <Container fluid>
               <Navbar.Brand href="#">
                 <Image src="./img/Logo_horizontal.svg"/>
@@ -28,15 +30,21 @@ function Header() {
                   </Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                    <Form className="d-flex">
+                  <div className="Search">
+                    <Form className="Search">
+                      <InputGroup className="SearchInput">
                         <Form.Control
-                        type="search"
-                        placeholder="Search"
-                        className="me-2"
-                        aria-label="Search"
+                          placeholder="검색"
+                          aria-label="Search"
+                          aria-describedby="basic-addon2"
+                          className="SearchInput"
                         />
-                        <Button variant="outline-success">Search</Button>
+                        <Button variant="outline-secondary" id="button-addon2" className="SearchButton">
+                          <Image src= './img/Search.svg'/>
+                        </Button>
+                      </InputGroup>
                     </Form>
+                  </div>
                   <Nav className="justify-content-end flex-grow-1 pe-3">
                     <Nav.Link href="#action1">채팅내역</Nav.Link>
                     <Nav.Link href="#action2">판매내역</Nav.Link>
