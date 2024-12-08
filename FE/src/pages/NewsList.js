@@ -23,13 +23,13 @@ function NewsList(){
         {
             postData.map(function(a,i){
               return (
-                <div className="list" key={i}>
+                <div className="list" key={a._id}>
                   <h4 onClick={()=>{
-                    console.log("글아이디" + postData[i]._id);
-                    navigate('/detail/'+ (postData[i]._id))
+                    console.log("글아이디" + a._id);
+                    navigate('/detail/'+ (a._id))
                   }}>
-                    {postData[i].title}
-                    {postData[i].content}
+                    {a.title}
+                    {a.content}
                   </h4>
                   {/* <button onClick={()=> DeleteNews(i)}>삭제</button> */}
                 </div>
