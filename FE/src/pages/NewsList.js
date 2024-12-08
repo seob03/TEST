@@ -36,9 +36,6 @@ function NewsList(){
               )
             })
         }
-        <Routes>
-          <Route path="/detail/:id" element={<Detail/>}/>
-        </Routes>
     </>
     );
 }

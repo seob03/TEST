@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import NewsList from './pages/NewsList';
 import NewsWrite from './pages/NewsWrite';
+import Detail from './pages/Detail';
 import './App.css';
 
 
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<NewsList/>}/>
         <Route path="/write" element={<NewsWrite/>}/>
+        <Route path="/detail/:id" element={<Detail/>}/>
       </Routes>
     </>
   );

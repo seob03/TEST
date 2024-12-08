@@ -12,6 +12,7 @@ app.use(express.static(path.join(__dirname,'../FE/build')))
 // 클라이언트-서버 포트 요청 열기
 const cors = require('cors');
 app.use(cors());
+const {ObjectId} = require('mongodb') // URL 파라미터에서 ObjectId 사용하기 위함
 
 let connectDB = require('./database.js') //database.js 파일 경로
 
@@ -36,6 +37,12 @@ app.get('/getDatabase', async (요청, 응답) => {
     응답.status(500).send('Database error');
   }
 });
+
+app.get('/detail/:id', async (요청, 응답) => {
+  console.log("URL 파라미터 값" + 요청.params)
+  let detailPage = await db.collection('post').findOne({_id : new ObjectId(요청.params.id)})
+  응답.json(detailPage);
+})
 
 app.get('/',  async (요청, 응답) => {
   응답.sendFile(path.join(__dirname, '../FE/build/index.html'))
