@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react';
 
 function NewsList(){
     let [title, setTitle] = useState([]); // 최종 입력값
-    // 백엔드에서 데이터 가져오기
+    // 백엔드에서 데이터 가져오기 (MS)
     useEffect(() => {
       fetch('/getDatabase')
         .then((response) => response.json())
@@ -15,9 +15,8 @@ function NewsList(){
         })
         .catch((error) => {
           console.error('Error fetching data:', error);
-        });
+        }, []);
     }, []);  // 컴포넌트가 마운트될 때 한 번만 실행
-    console.log(title);
     return (
     <>
       <div>리스트 페이지임</div>

@@ -1,3 +1,4 @@
+// express 사용
 const express = require('express')
 const app = express()
 app.set('view engine', 'ejs') // ejs 사용
@@ -5,7 +6,7 @@ app.use(express.static('public')); // 웹 서버가 public 서빙 제대로 하�
 // 요청.body 지원
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
-// reacr 연동
+// react 연동
 const path = require('path')
 app.use(express.static(path.join(__dirname,'../FE/build')))
 // 클라이언트-서버 포트 요청 열기
