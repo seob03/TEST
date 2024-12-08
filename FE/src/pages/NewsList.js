@@ -1,31 +1,29 @@
 import {useState, useEffect} from 'react';
 
 function NewsList(){
-    let [title, setTitle] = useState([]); // 최종 입력값
+    let [postData, setpostData] = useState([]); // 최종 입력값
     // 백엔드에서 데이터 가져오기 (MS)
     useEffect(() => {
       fetch('/getDatabase')
         .then((response) => response.json())
         .then((result) => {
-          let copy = new Array()
-          for (let i = 0; i < result.length; i++){
-            copy[i] = result[i].title
-          }
-          setTitle(copy);  // 응답받은 데이터를 title 상태에 저장
+          setpostData(result);
         })
         .catch((error) => {
           console.error('Error fetching data:', error);
         }, []);
     }, []);  // 컴포넌트가 마운트될 때 한 번만 실행
+
     return (
     <>
       <div>리스트 페이지임</div>
         {
-            title.map(function(a,i){
+            postData.map(function(a,i){
               return (
                 <div className="list" key={i}>
-                  <h4>
-                    {title[i]}
+                  <h4 onClick={()=>{let postId = postData[i]._id}}>
+                    {postData[i].title}
+                    {postData[i].content}
                   </h4>
                   {/* <button onClick={()=> DeleteNews(i)}>삭제</button> */}
                 </div>

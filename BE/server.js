@@ -47,5 +47,5 @@ app.get('/write',  async (요청, 응답) => {
 
 app.post('/add', async (요청, 응답) => {
   console.log(요청.body)
-  let result = await db.collection('post').insertOne( { title : 요청.body.title } )
+  let result = await db.collection('post').insertOne( { title : 요청.body.title , content : 요청.body.content} )
 })
