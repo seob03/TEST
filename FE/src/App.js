@@ -20,12 +20,14 @@ function App() {
 
   return (
     <>
-      <Header/>
-      <Routes>
-        <Route path="/" element={<NewsList/>}/>
-        <Route path="/write" element={<NewsWrite/>}/>
-        <Route path="/detail/:id" element={<Detail/>}/>
-      </Routes>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <Header/>
+        <Routes>
+          <Route path="/" element={<NewsList/>}/>
+          <Route path="/write" element={<NewsWrite/>}/>
+          <Route path="/detail/:id" element={<Detail/>}/>
+        </Routes>
+      </div>
     </>
   );
 }

@@ -1,23 +1,17 @@
-.Header {
+.Header-First {
     background-color: #FFFEFC;
+    display : flex;
 }
 
-.Search {
-    border-color: black;
+.Header-First-Logo{
+    width : 300px;
 }
 
-.SearchInput {
-    border-radius: 0;
-    border-color: #FFFEFC;
-    width : 360px;
+.Header-First-SearchBar{
+    width : 400px;
 }
 
-.SearchButton {
-    border-radius: 0;
-    border-color: #FFFEFC;
-}
-
-.SearchButton:hover {
-    background: none;
-    border-color: #FFFEFC;
+.Header-First-Menu{
+    width : 324px;
+    display : flex;
 }
