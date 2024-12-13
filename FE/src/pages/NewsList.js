@@ -1,6 +1,5 @@
 import {useState, useEffect} from 'react';
-import { Routes, Route, Link, useNavigate } from 'react-router-dom';
-import Detail from './Detail';
+import { useNavigate } from 'react-router-dom';
 
 function NewsList(){
     let navigate = useNavigate();
@@ -21,17 +20,16 @@ function NewsList(){
     <>
       <div>리스트 페이지임</div>
         {
-            postData.map(function(a,i){
+            postData.map(function(a, i){
               return (
-                <div className="list" key={a._id}>
+                <div className="list">
                   <h4 onClick={()=>{
-                    console.log("글아이디" + a._id);
-                    navigate('/detail/'+ (a._id))
+                    navigate('/detail/'+ a._id)
                   }}>
                     {a.title}
                     {a.content}
+                    {a.photo && <img src={a.photo} alt="Preview" style={{ maxWidth: '200px', margin: '10px 0' }} />}
                   </h4>
-                  {/* <button onClick={()=> DeleteNews(i)}>삭제</button> */}
                 </div>
               )
             })

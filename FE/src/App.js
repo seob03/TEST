@@ -22,6 +22,8 @@ function App() {
     <>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
         <Header/>
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
         <Routes>
           <Route path="/" element={<NewsList/>}/>
           <Route path="/write" element={<NewsWrite/>}/>
