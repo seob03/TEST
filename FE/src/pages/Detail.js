@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import Image from 'react-bootstrap/Image';
 import './Detail.css';
+import Image from 'react-bootstrap/Image';
+import './Detail.css';
 
 function Detail(props) {
   let { id } = useParams();
@@ -34,7 +36,7 @@ function Detail(props) {
 
           <div class="container">
             <div class="col w600">
-              <p>{pageResult.photo && <img src={pageResult.photo} alt="Post Image" style={{ maxWidth: '100%' }} />}</p>
+              <img src={pageResult.photo}/>
             </div>
             <div class="col w380">
               <div class="row h28">
