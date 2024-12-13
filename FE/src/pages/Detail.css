@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    flex-direction: row;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+}
+.w600 {
+    width : 600px;
+}
+.w380 {
+    width : 380px;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.h28{
+    height : 28px;
+}
+.h24 {
+    height : 24px;
+}
+.h56 {
+    height : 56px;
+}
+.eql {
+    width : 192px;
+    height: 240px;
+    border-color: gray;
+}
