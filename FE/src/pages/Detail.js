@@ -26,24 +26,27 @@ function Detail(props) {
 
   return (
     <div>
-      <div class="container">
-        <h4 class="item">
+      <div class="flex-container">
+        <h4>
           디테일 페이지
         </h4>
       </div>
 
-      <div class="container">
-        <div class="col w600">
-          <img src={pageResult.photo} />
+      <div class="flex-container">
+        <div class="col image">
+          <Image src="./img/cloth_sample.png"/>
+          {/* <img src={pageResult.photo} /> */}
         </div>
-        <div class="col w380">
+        <div class="col contents">
           <div class="row h28">
+            옷 팝니다 300만원이요
             {pageResult.title}
           </div>
           <div class="row h24">
-            가격
+           3,000,000원
           </div>
           <div class="row h56">
+            존나비싸서 못사는 병신들아
             {pageResult.content}
           </div>
           <div>
@@ -61,10 +64,10 @@ function Detail(props) {
         </div>
       </div>
 
-      <div class="container">
+      <div style={{display: 'block'}}>
         같은 카테고리의 상품
       </div>
-      <div class="container">
+      <div class="flex-container">
         <div class="row eql">
           상품 1
         </div>

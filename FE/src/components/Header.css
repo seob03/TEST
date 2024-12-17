@@ -30,6 +30,7 @@
 
 .Header-First-SearchBar {
     flex-grow: 2;
+    justify-content: center;
 }
 
 .Header-First-Menu {

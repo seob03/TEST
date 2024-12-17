@@ -1,14 +1,7 @@
 import './Header.css';
 import SearchBar from './SearchBar';
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Offcanvas from 'react-bootstrap/Offcanvas';
 import Image from 'react-bootstrap/Image';
+import {Link} from 'react-router-dom';
 
 function Header() {
   return (
@@ -30,9 +23,15 @@ function Header() {
           <SearchBar />
         </div>
         <div className='Header-First-Menu'>
-          <div href="#action1" className='Header-First-Menu-Buttons'>채팅내역</div>
-          <div href="#action2" className='Header-First-Menu-Buttons'>판매내역</div>
-          <div href="#action3" className='Header-First-Menu-Buttons'>내 상점</div>
+          <div className='Header-First-Menu-Buttons'>
+            <Link href="/" style={{textDecoration: 'none', color: 'black'}}>채팅내역</Link>
+          </div>
+          <div className='Header-First-Menu-Buttons'>
+            <Link href="/" style={{textDecoration: 'none', color: 'black'}}>판매내역</Link>
+          </div>
+          <div className='Header-First-Menu-Buttons'>
+            <Link href="/" style={{textDecoration: 'none', color: 'black'}}>내 상점</Link>
+          </div>
         </div>
       </div>
       <div style={{ display: 'flex', margintop: '20px' }}>

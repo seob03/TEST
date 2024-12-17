@@ -19,18 +19,23 @@ function App() {
   }
 
   return (
-    <>
+    <div>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
         <Header/>
       </div>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-        <Routes>
-          <Route path="/" element={<NewsList/>}/>
-          <Route path="/write" element={<NewsWrite/>}/>
-          <Route path="/detail/:id" element={<Detail/>}/>
-        </Routes>
+      <div style={{ display: 'flex', justifyContent: 'center', flex: 1,
+        width: '1024px', margin: '0 auto'
+      }}>
+        <div style={{width:'1024px'}}>
+          <Routes>
+            <Route path="/" element={<NewsList/>}/>
+            <Route path="/write" element={<NewsWrite/>}/>
+            <Route path="/detail" element={<Detail/>}/>
+            <Route path="/detail/:id" element={<Detail/>}/>
+          </Routes>
+        </div>
       </div>
-    </>
+    </div>
   );
 }
 
